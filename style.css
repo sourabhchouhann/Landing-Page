@@ -1,0 +1,345 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ================= COLORS ================= */
+:root {
+  --bg-main: #F9f3ee;
+  --text-main: #273440;
+  --panel-bg: #D8d1cb;
+  --text-bold: #1e2b38;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg-main);
+  font-family: "Times New Roman", serif;
+  color: var(--text-main);
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 1.2rem) clamp(1.2rem, 4vw, 2.4rem);
+  border-bottom: 1px solid var(--panel-bg);
+}
+
+.logo img {
+  width: clamp(30px, 4vw, 38px);
+  background-color: #fff;
+}
+
+.nav {
+  
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+}
+
+.nav a {
+  
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+}
+.nav a:hover{
+  
+  border-bottom:1px solid #1e2b38;
+}
+
+.btn {
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #1e2b38;
+  background: var(--text-bold);
+  color: #fff;
+  border-radius: 999px;
+  border: none;
+}
+
+.primary {
+  background: var(--text-bold);
+  color: #fff;
+  border-radius: 999px;
+  border: none;
+}
+
+.ghost {
+  background: transparent;
+  border: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.6rem, 4vw, 2.4rem);
+  padding: clamp(1.4rem, 4vw, 3.2rem);
+  min-height: calc(100vh - 160px);
+}
+
+/* ================= LEFT CONTENT ================= */
+.hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.05;
+  color: var(--text-bold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.hero-content p {
+  margin: 1.2rem 0;
+  max-width: 46ch;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+}
+
+/* ================= CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(1rem, 3vw, 1.6rem);
+  max-width: 650px;
+}
+
+.card {
+  background: var(--panel-bg);
+  padding: 1rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  border: 2px solid #fff;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+
+.card img {
+  width: clamp(70px, 10vw, 90px);
+  margin: 0 auto;
+}
+
+.card h3 {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 2.2rem;
+}
+
+/* PRICE EMBED */
+.card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 0.8rem 0;
+  font-weight: bold;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* ================= HERO ART ================= */
+.hero-art {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+}
+
+/* STONE */
+.stone {
+  position: absolute;
+  top: 4%;
+  left: 28%;
+  width: min(45%, 240px);
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+
+/* HAND */
+.hand {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: min(80%, 360px);
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+/* BARCODE */
+.barcode {
+  position: absolute;
+  bottom: 2%;
+  right: 12%;
+  width: min(55%, 260px);
+  background: var(--panel-bg);
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+  z-index: 4;
+}
+
+/* START BUTTON */
+.start-btn {
+  position: absolute;
+  left: 10%;
+  bottom: 18%;
+  background: var(--text-main);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.start-btn:hover{
+  background-color: #ff8383;
+  color: black;
+  border-bottom:2px solid #161616;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.4rem);
+  padding: clamp(1rem, 3vw, 1.4rem);
+  border-top: 1px solid var(--panel-bg);
+}
+
+.footer span {
+  position: relative;
+  padding: 0 1.8rem;
+  font-size: clamp(1.2rem, 1vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.footer span:hover{
+  border-bottom: 0.5px dotted black;
+}
+
+.footer span::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background: url("assets/star.png") no-repeat center / contain;
+  transform: translateY(-50%);
+}
+
+.footer span::before {
+  left: 0;
+}
+
+.footer span::after {
+  right: 0;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: 380px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .nav {
+    gap: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .start-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* ================= DARK MODE SUPPORT ================= */
+
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body,
+.header,
+.hero,
+.card,
+.footer,
+.nav a,
+.btn {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* DARK MODE VARIABLES */
+:root.dark {
+  --bg-main: #0f172a;
+  --text-main: #ccc5c5;     /* BLACK TEXT */
+  --text-bold: #fa9f9f;     /* BLACK HEADINGS */
+  --panel-bg: #1f2933;
+}
+
+/* Card price fix */
+:root.dark .card span {
+  background: #111827;
+  color: #f9fafb;
+}
+
+/* Footer border */
+:root.dark .footer {
+  border-top: 1px solid #374151;
+}
+
+/* Toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 6rem;
+  right: 1rem;
+  background: var(--panel-bg);
+  color: var(--text-main);
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.theme-toggle:focus {
+  outline: 2px dashed var(--text-bold);
+  outline-offset: 4px;
+}
